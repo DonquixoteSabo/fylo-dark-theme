@@ -6,6 +6,7 @@ const Nav = styled.nav`
   align-items: center;
   font-family: 'Raleway', sans-serif;
   padding: 20px;
+  background: hsl(217, 28%, 15%);
 `;
 const Logo = styled.img`
   width: 100px;
