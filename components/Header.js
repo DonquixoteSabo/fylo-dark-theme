@@ -57,6 +57,7 @@ export default function Header() {
           width={525}
           height={525}
           alt="team"
+          quality={100}
         />
         <h1>All your files in one secure location, accessible anywhere.</h1>
         <p>
