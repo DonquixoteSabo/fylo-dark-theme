@@ -6,38 +6,43 @@ const HeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
-  background: hsl(217, 28%, 15%);
+  max-width: 1200px;
   color: ${({ theme }) => theme.colors.neutral};
   font-family: 'Raleway', sans-serif;
-  background: hsl(217, 28%, 15%) url('/images/bg-curvy-mobile.svg') no-repeat
-    bottom;
-  background-size: contain;
 
-  p {
-    max-width: 425px;
+  p,
+  h1 {
+    max-width: 525px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0.75em;
   }
 `;
-const H1 = styled.h1`
-  max-width: 425px;
-  text-align: center;
-  margin: 20px 0;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  background: hsl(217, 28%, 15%) url('/images/bg-curvy-mobile.svg') no-repeat
+    bottom;
+  background-size: 100% 55%;
+  font-size: 1.1rem;
+  @media screen and (min-width: 786px) {
+    background-image: url('/images/bg-curvy-desktop.svg');
+    background-size: 100% 60%;
+    font-size: 1.2rem;
+  }
 `;
+
 const Button = styled.button`
-  border: none;
-  outline: none;
-  background: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-  color: ${({ theme }) => theme.colors.neutral};
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 15px 0;
   width: 200px;
-  border-radius: 25px;
+  padding: 1em 0;
+  margin: 1em 0;
+  font: 700 0.9em 'Raleway', sans-serif;
+  color: ${({ theme }) => theme.colors.neutral};
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   transition: 0.3s ease-in-out;
+  border-radius: 25px;
+  border: none;
   &:hover {
     background: linear-gradient(hsl(198, 60%, 50%), hsl(198, 60%, 50%));
   }
@@ -45,16 +50,17 @@ const Button = styled.button`
 
 export default function Header() {
   return (
-    <HeaderWrapper>
-      <Image src="/images/illustration-intro.png" width={425} height={425} />
-      <H1>All your files in one secure location, accessible anywhere.</H1>
-      <p>
-        Fylo stores all your most important files in one secure location. Access
-        them wherever you need, share and collaborate with friends family, and
-        co-workers.
-      </p>
-      <Button>Get Started</Button>
-      {/* <Background src="/images/bg-curvy-mobile.svg" /> */}
-    </HeaderWrapper>
+    <Container>
+      <HeaderWrapper>
+        <Image src="/images/illustration-intro.png" width={525} height={525} />
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </p>
+        <Button>Get Started</Button>
+      </HeaderWrapper>
+    </Container>
   );
 }
