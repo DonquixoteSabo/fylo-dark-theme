@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import Carts from '../components/Carts';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Navigation />
       <Header />
+      <Carts />
     </>
   );
 }
