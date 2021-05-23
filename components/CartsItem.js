@@ -6,13 +6,9 @@ const Cart = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2em;
+  margin: 1em;
   color: ${({ theme }) => theme.colors.neutral};
   max-width: 350px;
-
-  @media screen and (min-width: 786px) {
-    width: 50%;
-  }
 `;
 
 const Title = styled.header`
@@ -21,8 +17,8 @@ const Title = styled.header`
 `;
 
 const Text = styled.p`
-  text-align: center;
   font: 400 0.925rem/1.2rem 'Raleway', sans-serif;
+  text-align: center;
   margin: 1em 0;
 `;
 
