@@ -52,7 +52,12 @@ export default function Header() {
   return (
     <Container>
       <HeaderWrapper>
-        <Image src="/images/illustration-intro.png" width={525} height={525} />
+        <Image
+          src="/images/illustration-intro.png"
+          width={525}
+          height={525}
+          alt="team"
+        />
         <h1>All your files in one secure location, accessible anywhere.</h1>
         <p>
           Fylo stores all your most important files in one secure location.
