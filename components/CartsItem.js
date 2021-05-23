@@ -26,12 +26,10 @@ const Text = styled.p`
   margin: 1em 0;
 `;
 
-const StyledImage = styled(Image)``;
-
 export default function CartsItem({ title, content, img, alt }) {
   return (
     <Cart>
-      <StyledImage src={img} alt={alt} width={100} height={100} />
+      <Image src={img} alt={alt} width={100} height={100} objectFit="contain" />
       <Title>{title}</Title>
       <Text>{content}</Text>
     </Cart>
