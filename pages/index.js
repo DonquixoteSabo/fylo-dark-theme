@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Carts from '../components/Carts';
+import Info from '../components/Info';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Navigation />
       <Header />
       <Carts />
+      <Info />
     </>
   );
 }
