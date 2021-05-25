@@ -38,12 +38,12 @@ const Button = styled.button`
   font: 700 0.9em 'Raleway', sans-serif;
   color: ${({ theme }) => theme.colors.neutral};
   box-shadow: 12px 14px 14px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  background: ${({ theme }) => theme.colors.cadetBlue};
   transition: 0.3s ease-in-out;
   border-radius: 25px;
   border: none;
   &:hover {
-    background: linear-gradient(hsl(198, 60%, 50%), hsl(198, 60%, 50%));
+    background: hsl(198, 60%, 50%);
   }
 `;
 
