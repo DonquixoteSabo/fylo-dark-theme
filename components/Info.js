@@ -6,7 +6,6 @@ const InfoWrapper = styled.article`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 2em;
   @media screen and (min-width: 986px) {
@@ -25,7 +24,6 @@ const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
   }
 `;
 
@@ -39,18 +37,42 @@ const Text = styled.p`
 `;
 
 const Button = styled.button`
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
-  color: hsl(198, 60%, 50%);
-  border-bottom: 1px solid hsl(198, 60%, 50%);
+  color: ${({ theme }) => theme.colors.cadetBlue};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.cadetBlue};
+  padding-bottom: 0.2em;
   font-size: 1.125rem;
   margin-bottom: 30px;
+  transition: 0.3s ease-in-out;
+  .arrow-hover {
+    display: none;
+  }
+  .arrow {
+    margin-left: 0.3em;
+  }
+  img {
+    width: 20px;
+  }
+  &:hover {
+    color: ${({ theme }) => theme.colors.neutral};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.neutral};
+    transform: translateY(-10%);
+
+    img {
+      display: none;
+    }
+    .arrow-hover {
+      display: block;
+    }
+  }
 `;
 
 const StyledImage = styled(Image)`
   width: 50%;
   max-width: 700px;
-  flex-grow: 1;
   object-fit: contain;
 `;
 
@@ -73,7 +95,13 @@ export default function Info() {
           for live collaboration. No email attachments required.
         </Text>
         <div>
-          <Button>See how Fylo works</Button>
+          <Button>
+            See how Fylo works{' '}
+            <span className="arrow">
+              <img src="/images/icon-arrow.svg" alt="arrow icon" />
+              <div className="arrow-hover">&rarr;</div>
+            </span>
+          </Button>
         </div>
       </TextContainer>
     </InfoWrapper>
