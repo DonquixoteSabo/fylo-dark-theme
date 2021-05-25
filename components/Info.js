@@ -10,7 +10,7 @@ const InfoWrapper = styled.article`
   padding: 2em;
   @media screen and (min-width: 986px) {
     flex-direction: row;
-    justify-content: space-evenly;
+    padding: 4vw;
   }
 `;
 
@@ -39,27 +39,31 @@ const Text = styled.p`
 const Button = styled.button`
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 0.2em;
   background: none;
   border: none;
-  color: ${({ theme }) => theme.colors.cadetBlue};
   border-bottom: 2px solid ${({ theme }) => theme.colors.cadetBlue};
-  padding-bottom: 0.2em;
+  color: ${({ theme }) => theme.colors.cadetBlue};
   font-size: 1.125rem;
-  margin-bottom: 30px;
   transition: 0.3s ease-in-out;
+
   .arrow-hover {
     display: none;
   }
+
   .arrow {
     margin-left: 0.3em;
   }
+
   img {
     width: 20px;
   }
+
   &:hover {
-    color: ${({ theme }) => theme.colors.neutral};
     border-bottom: 2px solid ${({ theme }) => theme.colors.neutral};
-    transform: translateY(-10%);
+    color: ${({ theme }) => theme.colors.neutral};
+    transform: translateY(-5%);
 
     img {
       display: none;
