@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Carts from '../components/Carts';
 import Info from '../components/Info';
+import CommentsList from '../components/CommentsList';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Header />
       <Carts />
       <Info />
+      <CommentsList />
     </>
   );
 }
