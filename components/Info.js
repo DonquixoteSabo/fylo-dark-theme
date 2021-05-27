@@ -87,6 +87,7 @@ export default function Info() {
         src="/images/illustration-stay-productive.png"
         width={700}
         height={500}
+        quality={100}
       />
       <TextContainer>
         <Title>Stay productive, wherever you are</Title>

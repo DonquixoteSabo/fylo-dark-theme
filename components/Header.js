@@ -46,12 +46,15 @@ const Button = styled.button`
     background: hsl(198, 60%, 50%);
   }
 `;
+const StyledImage = styled(Image)`
+  object-fit: contain;
+`;
 
 export default function Header() {
   return (
     <Container>
       <HeaderWrapper>
-        <Image
+        <StyledImage
           src="/images/illustration-intro.png"
           width={525}
           height={525}
