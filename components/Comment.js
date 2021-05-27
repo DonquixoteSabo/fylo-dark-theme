@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.article`
+  position: relative;
   width: 100%;
   max-width: 400px;
   margin: 20px;
@@ -29,11 +30,20 @@ const Img = styled.img`
   border-radius: 50%;
   width: 100%;
 `;
-export default function Comment({ text, src, name, title }) {
+const Icon = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transform: translate(-30%, -50%);
+`;
+export default function Comment({ text, src, name, title, quoteIcon = false }) {
   return (
     <Wrapper>
+      {quoteIcon && <Icon src="/images/bg-quotes.png" />}
       <Text>{text}</Text>
-
       <Info>
         <Img src={src} />
         <h3>{name}</h3>

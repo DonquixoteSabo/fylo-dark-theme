@@ -17,6 +17,7 @@ const commentsData = [
     name: 'Satish Patel',
     title: 'Founder & CEO, Huddle',
     id: 1,
+    quoteIcon: true,
   },
   {
     text: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
@@ -36,10 +37,12 @@ const commentsData = [
 
 export default function CommentsList() {
   return (
-    <Wrapper>
-      {commentsData.map((item) => (
-        <Comment key={item.id} {...item} />
-      ))}
-    </Wrapper>
+    <>
+      <Wrapper>
+        {commentsData.map((item) => (
+          <Comment key={item.id} {...item} />
+        ))}
+      </Wrapper>
+    </>
   );
 }
