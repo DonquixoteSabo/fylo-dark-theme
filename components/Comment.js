@@ -7,6 +7,7 @@ const Wrapper = styled.article`
   background: hsl(219, 30%, 18%);
   padding: 2em;
   margin: 20px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
 `;
 
 const Text = styled.p`
