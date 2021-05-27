@@ -17,6 +17,7 @@ const theme = {
   colors: {
     primary: '#0070f3',
     neutral: 'hsl(0, 0%, 100%)',
+    cadetBlue: '#62E0D9',
   },
 };
 
