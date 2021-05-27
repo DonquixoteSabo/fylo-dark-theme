@@ -28,19 +28,15 @@ const Img = styled.img`
   border-radius: 50%;
   width: 100%;
 `;
-export default function Comment() {
+export default function Comment({ text, src, name, title }) {
   return (
     <Wrapper>
-      <Text>
-        Fylo has improved our team productivity by an order of magnitude. Since
-        making the switch our team has become a well-oiled collaboration
-        machine.
-      </Text>
+      <Text>{text}</Text>
 
       <Info>
-        <Img src="/images/profile-1.jpg" />
-        <h3>Satish Patel</h3>
-        <small>Founder & CEO, Huddle</small>
+        <Img src={src} />
+        <h3>{name}</h3>
+        <small>{title}</small>
       </Info>
     </Wrapper>
   );
