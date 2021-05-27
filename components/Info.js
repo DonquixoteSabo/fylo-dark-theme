@@ -75,8 +75,6 @@ const Button = styled.button`
 `;
 
 const StyledImage = styled(Image)`
-  width: 50%;
-  max-width: 700px;
   object-fit: contain;
 `;
 
