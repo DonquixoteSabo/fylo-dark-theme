@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.article`
-  color: ${({ theme }) => theme.colors.neutral};
   width: 100%;
   max-width: 400px;
-  background: hsl(219, 30%, 18%);
-  padding: 2em;
   margin: 20px;
+  padding: 2em;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+  color: ${({ theme }) => theme.colors.neutral};
+  background: hsl(219, 30%, 18%);
 `;
 
 const Text = styled.p`
