@@ -91,11 +91,7 @@ export default function Form() {
   const [isValid, setIsValid] = useState(true);
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (inputValue.includes('@')) {
-      setIsValid(true);
-    } else {
-      setIsValid(false);
-    }
+    setIsValid(inputValue.includes('@'));
   };
 
   return (
