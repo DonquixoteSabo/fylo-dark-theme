@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Carts from '../components/Carts';
 import Info from '../components/Info';
 import CommentsList from '../components/CommentsList';
+import Form from '../components/Form';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Carts />
       <Info />
       <CommentsList />
+      <Form />
     </>
   );
 }
