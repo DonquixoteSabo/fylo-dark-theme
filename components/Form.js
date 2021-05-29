@@ -46,6 +46,7 @@ const Text = styled.p`
 const Input = styled.input`
   padding: 1em 2em;
   border-radius: 100px;
+  margin-bottom: 1em;
   @media screen and (min-width: 768px) {
     width: 65%;
   }
@@ -54,16 +55,17 @@ const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 1em;
+  margin: 2em 0;
   @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 `;
 const Button = styled.button`
   padding: 0.9em 0;
-  margin: 2em 0;
+
   font: 700 1.2em 'Raleway', sans-serif;
   color: ${({ theme }) => theme.colors.neutral};
   box-shadow: 12px 14px 14px rgba(0, 0, 0, 0.2);
@@ -78,8 +80,23 @@ const Button = styled.button`
     width: 30%;
   }
 `;
+const Error = styled.p`
+  color: hsl(0, 100%, 63%);
+  width: 100%;
+  font-weight: 700;
+  margin: 0.4em 0 0 0.3em;
+`;
 export default function Form() {
   const [inputValue, setInputValue] = useState('');
+  const [isValid, setIsValid] = useState(true);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (inputValue.includes('@')) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  };
 
   return (
     <Container>
@@ -91,13 +108,14 @@ export default function Form() {
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </Text>
-        <FormWrapper onSubmit={(e) => e.preventDefault()}>
+        <FormWrapper onSubmit={handleSubmit}>
           <Input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="email@example.com"
           />
           <Button type="submit">Get Started for Free</Button>
+          {!isValid && <Error>Please enter a valid email address</Error>}
         </FormWrapper>
       </Wrapper>
     </Container>
