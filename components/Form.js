@@ -16,17 +16,17 @@ const Background = styled.div`
 `;
 
 const Wrapper = styled.section`
-  max-width: 900px;
   position: relative;
-  color: white;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-  width: 90%;
-  margin: 0 auto;
-  padding: 2em 4em 0;
-  background: hsl(217, 28%, 15%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  padding: 2em 4em 0;
+  background: hsl(217, 28%, 15%);
+  color: white;
 `;
 const Title = styled.header`
   font-size: 1.65rem;
@@ -65,14 +65,13 @@ const FormWrapper = styled.form`
 `;
 const Button = styled.button`
   padding: 0.9em 0;
-
-  font: 700 1.2em 'Raleway', sans-serif;
   color: ${({ theme }) => theme.colors.neutral};
   box-shadow: 12px 14px 14px rgba(0, 0, 0, 0.2);
   background: ${({ theme }) => theme.colors.cadetBlue};
   transition: 0.3s ease-in-out;
   border-radius: 25px;
   border: none;
+  font: 700 1.2em 'Raleway', sans-serif;
   &:hover {
     background: hsl(198, 60%, 50%);
   }
@@ -81,10 +80,10 @@ const Button = styled.button`
   }
 `;
 const Error = styled.p`
-  color: hsl(0, 100%, 63%);
   width: 100%;
-  font-weight: 700;
   margin: 0.4em 0 0 0.3em;
+  font-weight: 700;
+  color: hsl(0, 100%, 63%);
 `;
 export default function Form() {
   const [inputValue, setInputValue] = useState('');
