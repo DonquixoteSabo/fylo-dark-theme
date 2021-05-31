@@ -46,9 +46,12 @@ const Text = styled.p`
 const Input = styled.input`
   padding: 1em 2em;
   border-radius: 100px;
+  outline: none;
   margin-bottom: 1em;
+
   @media screen and (min-width: 768px) {
     width: 65%;
+    margin-bottom: 0;
   }
 `;
 const FormWrapper = styled.form`
