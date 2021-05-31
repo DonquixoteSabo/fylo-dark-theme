@@ -37,7 +37,30 @@ const Links = styled.ul`
     }
   }
 `;
-const Social = styled.div``;
+const Socials = styled.ul`
+  display: flex;
+  justify-content: center;
+  li {
+    list-style: none;
+    &:hover {
+      .fab {
+        color: hsl(198, 60%, 50%);
+        border: 1px solid hsl(198, 60%, 50%);
+      }
+    }
+  }
+
+  .fab {
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 1rem;
+    &::nth-child(3) {
+      margin: 0;
+    }
+  }
+`;
 
 export default function Footer() {
   return (
@@ -83,7 +106,17 @@ export default function Footer() {
           <a href="#home">Privacy</a>
         </li>
       </Links>
-      <Social className="col">SOCIALS</Social>
+      <Socials className="col">
+        <li>
+          <i className="fab fa-facebook-f" />
+        </li>
+        <li>
+          <i className="fab fa-twitter" />
+        </li>
+        <li>
+          <i className="fab fa-instagram" />
+        </li>
+      </Socials>
     </Wrapper>
   );
 }
