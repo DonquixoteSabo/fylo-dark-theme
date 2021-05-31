@@ -21,7 +21,22 @@ const Logo = styled.img`
 const Icon = styled.img`
   width: 15px;
 `;
-const Links = styled.div``;
+const Links = styled.ul`
+  font-size: 1rem;
+  margin: 2em 0;
+  li {
+    list-style: none;
+    margin: 0.5em 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+`;
 const Social = styled.div``;
 
 export default function Footer() {
@@ -43,9 +58,32 @@ export default function Footer() {
         <Icon src="/images/icon-email.svg" alt="location" />
         <p>example@fylo.com</p>
       </div>
-      <Links className="col">a</Links>
-      <Links className="col">a</Links>
-      <Social className="col">a</Social>
+      <Links className="col">
+        <li>
+          <a href="#home">About us</a>
+        </li>
+        <li>
+          <a href="#home">Jobs</a>
+        </li>
+        <li>
+          <a href="#home">Press</a>
+        </li>
+        <li>
+          <a href="#home">Blogs</a>
+        </li>
+      </Links>
+      <Links className="col">
+        <li>
+          <a href="#home">Contact U</a>
+        </li>
+        <li>
+          <a href="#home">Terms</a>
+        </li>
+        <li>
+          <a href="#home">Privacy</a>
+        </li>
+      </Links>
+      <Social className="col">SOCIALS</Social>
     </Wrapper>
   );
 }
