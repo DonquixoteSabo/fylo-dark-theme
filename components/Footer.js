@@ -71,11 +71,11 @@ const Socials = styled.ul`
   }
 
   .fab {
-    font-size: 1rem;
-    border: 1px solid white;
-    padding: 0.5em;
-    border-radius: 50%;
     margin: 0 1rem;
+    font-size: 1rem;
+    padding: 0.5em;
+    border: 1px solid white;
+    border-radius: 50%;
     &::nth-child(3) {
       margin: 0;
     }
@@ -87,7 +87,7 @@ export default function Footer() {
     <Wrapper>
       <Logo src="/images/logo.svg" alt="Fylo logo" />
       <IconWrapper>
-        <Icon src="/images/icon-location.svg" alt="location" />
+        <Icon src="/images/icon-location.svg" alt="location icon" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi
           odit aliquid aspernatur
@@ -103,7 +103,7 @@ export default function Footer() {
           <p>example@fylo.com</p>
         </IconWrapper>
       </div>
-      <Links className="col">
+      <Links>
         <li>
           <a href="#home">About us</a>
         </li>
@@ -117,7 +117,7 @@ export default function Footer() {
           <a href="#home">Blogs</a>
         </li>
       </Links>
-      <Links className="col">
+      <Links>
         <li>
           <a href="#home">Contact U</a>
         </li>
@@ -128,7 +128,7 @@ export default function Footer() {
           <a href="#home">Privacy</a>
         </li>
       </Links>
-      <Socials className="col">
+      <Socials>
         <li>
           <i className="fab fa-facebook-f" />
         </li>
