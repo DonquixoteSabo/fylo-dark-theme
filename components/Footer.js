@@ -4,19 +4,36 @@ const Wrapper = styled.footer`
   background: hsl(216, 53%, 9%);
   padding: 5em 2em 1em;
   color: ${({ theme }) => theme.colors.neutral};
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 0.5em 0;
-    p {
-      margin-left: 5vw;
-    }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 1em;
+  } ;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5em 0;
+  p {
+    margin-left: 2em;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 250px;
   }
 `;
+
 const Logo = styled.img`
   width: 35%;
   max-width: 200px;
   object-fit: contain;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
 `;
 const Icon = styled.img`
   width: 15px;
@@ -35,6 +52,9 @@ const Links = styled.ul`
     &:hover {
       font-weight: 700;
     }
+  }
+  @media screen and (min-width: 768px) {
+    margin: 0;
   }
 `;
 const Socials = styled.ul`
@@ -66,20 +86,22 @@ export default function Footer() {
   return (
     <Wrapper>
       <Logo src="/images/logo.svg" alt="Fylo logo" />
-      <div className="col icon-wrapper">
+      <IconWrapper>
         <Icon src="/images/icon-location.svg" alt="location" />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi
           odit aliquid aspernatur
         </p>
-      </div>
-      <div className="col icon-wrapper">
-        <Icon src="/images/icon-phone.svg" alt="location" />
-        <p>+1-543-123-4567</p>
-      </div>
-      <div className="col icon-wrapper">
-        <Icon src="/images/icon-email.svg" alt="location" />
-        <p>example@fylo.com</p>
+      </IconWrapper>
+      <div>
+        <IconWrapper>
+          <Icon src="/images/icon-phone.svg" alt="location" />
+          <p>+1-543-123-4567</p>
+        </IconWrapper>
+        <IconWrapper>
+          <Icon src="/images/icon-email.svg" alt="location" />
+          <p>example@fylo.com</p>
+        </IconWrapper>
       </div>
       <Links className="col">
         <li>
