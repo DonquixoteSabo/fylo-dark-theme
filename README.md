@@ -1,5 +1,6 @@
 # Frontend Mentor - Fylo dark theme landing page solution
 
+
 This is a solution to the [Fylo dark theme landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd).
 
 ## Table of contents
@@ -22,13 +23,11 @@ Users should be able to:
 
 ### Screenshot
 
-[Imgur](https://i.imgur.com/dcXF5MS.png)
-[Imgur](https://i.imgur.com/dcXF5MS.png)
+![screenshot](https://i.imgur.com/oMkkoJu.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/DonquixoteSabo/fylo-dark-theme)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Link](https://fylo-dark-theme-tawny.vercel.app/)
 
 ### Built with
 
